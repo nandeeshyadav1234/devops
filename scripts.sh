@@ -1,12 +1,12 @@
 #!/bin/bash
 services = s1,s2,s3
 
-for $serv in services
+for serviceName in services
 do
-sudo service $serv status
+sudo service serviceName status
 	if [$? --eg 0] then 
-	echo "${serv} service running"
+	echo "${serviceName} service running"
 	el
-	echo "${serv} service is not running"
+	echo "${serviceName} service is not running"
 	endif
 end
